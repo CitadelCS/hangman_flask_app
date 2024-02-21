@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+</head>
+<body>
+<h1>Hangman Game</h1>
+<p>Guess the word: {{ game_state.display|join(' ') }}</p>
+<p>Lives left: {{ game_state.lives }}</p>
+{% if game_state.message %}
+    <p>{{ game_state.message }}</p>
+{% endif %}
+<!-- Add the hangman stage display here -->
+{% if game_state.lives == 6 %}
+    <pre>
+        +---+
+        |   |
+            |
+            |
+            |
+            |
+    =========
+    Uh Oh, there goes the platform!
+    </pre>
+{% elif game_state.lives == 5 %}
+    <pre>
+    +---+
+    |   |
+    O   |
+        |
+        |
+        |
+  =======
+  Oh man! There goes the Head!
+    </pre>
+{% elif game_state.lives == 4 %}
+    <pre>
+    +---+
+    |   |
+    O   |
+    |   |
+        |
+        |
+  =========
+  Here comes the Mid-Section!
+    </pre>
+{% elif game_state.lives == 3 %}
+    <pre>
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+    =========
+    I see a right arm!
+    </pre>
+{% elif game_state.lives == 2 %}
+    <pre>
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+    =========
+    Here comes the left arm!
+    </pre>
+{% elif game_state.lives == 1 %}
+    <pre>
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+    =========
+    Uh oh, there the right leg, you're down to one more try!
+    </pre>
+{% elif game_state.lives == 0 %}
+    <pre>
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+    =========
+    Sorry, GAME OVER...
+    </pre>
+{% endif %}
+<form action="/guess" method="post">
+    <input type="text" name="guess" maxlength="1" placeholder="Enter a letter" required>
+    <button type="submit">Guess</button>
+</form>
+{% if game_state.game_over %}
+    <p>Game Over. <a href="/">Start Over?</a></p>
+{% else %}
+    <a href="/">Guess Again</a>
+{% endif %}
+</body>
+</html>

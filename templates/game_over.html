@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+</head>
+<body>
+<h1>Hangman Game</h1>
+<p>{{ message }}</p>
+<p>{{'Sorry bub, you win some and you lose some, but you live... but you live...' }}</p>
+<p>Lives remaining: {{ game_state.lives }}</p>
+<!-- Add the hangman stage display here -->
+{% if game_state.game_over %}
+    <pre>
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+    =========
+    Sorry, GAME OVER...
+    </pre>
+    <p>Game Over! The word was: {{ game_state.chosen_word }}</p>
+{% endif %}
+<form action="/new_game" method="post">
+    <button type="submit">Start New Game</button>
+</form>
+</body>
+</html>
