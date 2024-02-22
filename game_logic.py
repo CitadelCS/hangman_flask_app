@@ -76,8 +76,8 @@ class HangmanGame:
 
     def guess_letter(self, guess):
         if guess in self.chosen_word:
-            for index in range(len(self.chosen_word)):
-                if self.chosen_word[index] == guess:
+            for index, letter in enumerate(self.chosen_word):
+                if letter == guess:
                     self.display[index] = guess
             if "_" not in self.display:
                 self.game_over = True
@@ -90,10 +90,9 @@ class HangmanGame:
             else:
                 self.message = "Wrong guess. You have {} lives left.".format(self.lives)
 
-        # Update the hangman stage based on the current number of lives
-        self.stages = self.stages[self.lives]
-
         return ''.join(self.display), self.lives, self.message, self.game_over
+
+
 
 
     def to_json(self):
