@@ -1,0 +1,32 @@
+<!-- game_winner.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game - Winner</title>
+</head>
+<body>
+<h1>Hangman Game</h1>
+<p>{{ message }}</p>
+<p>{{'Ayyye you did it!' }}</p>
+<p>Lives remaining: {{ game_state.lives }}</p>
+<!-- Add the hangman stage display here -->
+{% if game_state.game_over and 'Congratulations' in message %}
+    <pre>
+      +---+
+      |   |
+          |
+     \O/  |
+      |   |
+     / \  |
+    =========
+    Winner, Winner, Chicken Dinner!!!
+    </pre>
+    <p>You've guess the correct word: {{ game_state.chosen_word }}</p>
+{% endif %}
+<form action="/new_game" method="post">
+    <button type="submit">Start New Game</button>
+</form>
+</body>
+</html>

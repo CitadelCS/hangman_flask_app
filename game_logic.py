@@ -74,23 +74,27 @@ class HangmanGame:
                     Uh Oh, there goes the platform!
                     ''']
 
+# Inside the HangmanGame class
+
     def guess_letter(self, guess):
         if guess in self.chosen_word:
             for index, letter in enumerate(self.chosen_word):
                 if letter == guess:
                     self.display[index] = guess
+            # Check if the game has been won
             if "_" not in self.display:
                 self.game_over = True
                 self.message = "Congratulations, you've won!"
+                return ''.join(self.display), self.lives, self.message, self.game_over
         else:
             self.lives -= 1
             if self.lives == 0:
                 self.game_over = True
                 self.message = "Game over. The word was '{}'.".format(self.chosen_word)
-            else:
-                self.message = "Wrong guess. You have {} lives left.".format(self.lives)
 
         return ''.join(self.display), self.lives, self.message, self.game_over
+
+
 
 
 
@@ -108,15 +112,18 @@ class HangmanGame:
 
     @classmethod
     def from_json(cls, data):
-        # Deserialize JSON data into a HangmanGame object
-        game = cls([])
+        # Create a new instance of the game without choosing a new word
+        game = cls.__new__(cls)
+        # Manually set the attributes from the provided JSON data
         game.chosen_word = data['chosen_word']
         game.lives = data['lives']
         game.display = data['display']
         game.game_over = data['game_over']
         game.message = data['message']
-        game.stages = data['stages']  # Deserialize the stages attribute
+        game.stages = data['stages']
+        # No need to pass a word list since we're restoring a game, not starting a new one
         return game
+
 
 
 def load_word_list(file_path):
