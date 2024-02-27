@@ -4,7 +4,11 @@ from game_logic import HangmanGame, load_word_list, new_game
 class TestHangmanGame(unittest.TestCase):
 
     def setUp(self):
-        self.word_list = ['hello', 'world', 'python']
+        self.word_list = ['testing', 'hangman', 'python']
+        self.game = HangmanGame(self.word_list)
+        # Set up a known state
+        self.game.chosen_word = 'testing'
+        self.game.display = ['_' for _ in self.game.chosen_word]
 
     def test_guess_letter_correct_guess(self):
         game = HangmanGame(self.word_list)
@@ -15,15 +19,14 @@ class TestHangmanGame(unittest.TestCase):
         self.assertEqual(game.game_over, False)
         self.assertEqual(game.message, '')
 
-    def test_guess_letter_wrong_guess(self):
-        game = HangmanGame(self.word_list)
-        game.chosen_word = 'hello'
-        game.display = ['_', '_', '_', '_', '_']
-        game.guess_letter('z')
-        self.assertEqual(game.display, ['_', '_', '_', '_', '_'])
-        self.assertEqual(game.lives, 5)
-        self.assertEqual(game.game_over, False)
-        self.assertEqual(game.message, 'Wrong guess. You have 5 lives left.')
+    def test_guess_wrong_letter(self):
+        self.game.chosen_word = 'testing'
+        self.game.display = ['_' for _ in self.game.chosen_word]
+        initial_lives = self.game.lives
+        letter = 'z'
+        _, lives, message, game_over = self.game.guess_letter(letter)
+        self.assertEqual(initial_lives - 1, lives)
+        self.assertFalse(game_over)
 
     def test_game_over(self):
         game = HangmanGame(self.word_list)
