@@ -1,10 +1,4 @@
 
-X
-(venv/Lib/site-packages/flask/sessions.py,6\b\6bb5e78d428bb3834144ddda87a7583ffb84c619
-S
-#venv/Lib/site-packages/flask/app.py,2\c\2c52e8aa5d8f8f7e2f3af48578af66746fec88f1
-Z
-*venv/Lib/site-packages/werkzeug/serving.py,7\4\7492572ebebaba9e1f37d25f9154313727bbe256
 9
 	names.txt,d\f\df294cf0c23650dd0f1fe0178e6da8dbfd51e32c
 H
@@ -22,7 +16,8 @@ D
 @
 requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
 =
-game_logic.py,6\c\6c2059354a1dfeb2b2abcb5fcf1934bdc109f27d
+
+game_logic.py,6\c\6c2059354a1dfeb2b2abcb5fcf1934bdc109f27d
 A
 Tests/test_app.py,a\5\a50dde404519a9bb8cc17e3edf71a94ce92dba7b
 B

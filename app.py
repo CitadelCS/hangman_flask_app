@@ -13,7 +13,7 @@
 #     if 'game_state' not in session:
 #         session.clear()
 #
-#         word_list = load_word_list('names.txt')
+#         word_list = load_word_list('names.txt')pip install --upgrade spyder
 #         game = HangmanGame(word_list)
 #         # Serialize the parts of the game state that need to be stored
 #         session['game_state'] = {

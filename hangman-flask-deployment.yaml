@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hangman-flask-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hangman
+  template:
+    metadata:
+      labels:
+        app: hangman
+    spec:
+      containers:
+        - name: hangman-flask-app
+          image: rowingsjr/hangman-flask-app:hangmanpy
+          ports:
+            - containerPort: 5000
