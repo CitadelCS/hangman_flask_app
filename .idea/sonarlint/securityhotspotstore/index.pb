@@ -29,3 +29,7 @@ B
 Tests/test_game.py,3\7\377da757d3c366051a05316d444fc21ee632efff
 8
 Procfile,b\c\bc3c68e880d1a01632bce79f69dd1387c7ba9c54
+J
+templates/game_winner.html,4\d\4db46c95e916fcb025149189f5520d851022cf48
+J
+.github/workflows/main.yml,c\7\c778226b6c4c0fb51cf7942c8ee1f3d9fc1249d0
