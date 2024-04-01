@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: hangman_flask
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 3
