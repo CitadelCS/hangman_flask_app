@@ -13,7 +13,6 @@ The Hangman Flask App is a fun, interactive web-based game where players guess a
   - [Docker](#docker)
   - [Docker Swarm](#docker-swarm)
 - [Development](#development)
-- [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -66,14 +65,15 @@ docker run -p 5000:5000 hangman_flask
 
 The app should now be running on localhost:5000.
 
-###### Usage
+## Usage
 
 Here you can include a fun example of how to play the game or how to interact with the app.
 
-###### Deployment
+## Deployment
 
 Additional notes about how to deploy this on a live system.
-Docker
+
+### Docker
 
 Run the container in detached mode with the following command:
 
@@ -81,7 +81,7 @@ bash
 
 docker run -d -p 5000:5000 hangman_flask
 
-Docker Swarm
+### Docker Swarm
 
 Initialize Docker Swarm:
 
@@ -96,25 +96,24 @@ bash
 docker stack deploy -c docker-compose.yml hangman_stack
 
 The application will be accessible at http://localhost:5000 or the IP of any Docker Swarm node.
-Development
+
+## Development
 
 If you wish to develop the app, you can mount a volume to the Docker container to allow for live editing of the Flask application files.
-Contributing
 
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-Authors
+## Authors
 
-    Your Name - Initial work - YourUsername
+    Richard Owings Jr - Graduate Student MS Computer Science - Initial work and development of project - rowingsjr
 
 See also the list of contributors who participated in this project.
-License
+
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-Acknowledgments
 
-    Hat tip to anyone whose code was used
-    Inspiration
-    etc
+## Acknowledgments
+
+    Special Ackonwledgment to Dr. Verdicchio for allowing this to be a success. 
 
 ```bash
 docker
