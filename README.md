@@ -31,9 +31,10 @@ What things you need to install the software and how to install them:
 For more information on using Docker and deploying applications, consider the following tutorials:
 
     [Docker 101 Tutorial](https://www.docker.com/101-tutorial/)
-    Swarm Mode Tutorial
-    Heroku GitHub Integration
-    YouTube Flask Tutorial
+    [Swarm Mode Tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/)
+    Heroku cost!
+    [Heroku GitHub Integration](https://devcenter.heroku.com/articles/github-integration)
+    [DevSecOps Tutorial for Beginners | CI Pipeline with GitHub Actions and Docker Scout](https://www.youtube.com/watch?v=gLJdrXPn0ns)
 
 ##### Installation
 
