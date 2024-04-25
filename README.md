@@ -26,11 +26,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them:
 
-```bash
-docker
-docker-compose
+#### Tutorials
 
-Installation
+For more information on using Docker and deploying applications, consider the following tutorials:
+
+    [Docker 101 Tutorial](https://www.docker.com/101-tutorial/)
+    Swarm Mode Tutorial
+    Heroku GitHub Integration
+    YouTube Flask Tutorial
+
+##### Installation
 
 A step by step series of examples that tell you how to get a development env running.
 
@@ -38,7 +43,7 @@ Clone the repo:
 
 bash
 
-git clone https://github.com/yourusername/hangman_flask.git
+git clone https://github.com/rowingsjr/hangman_flask.git
 
 Navigate to the cloned directory:
 
@@ -59,13 +64,17 @@ bash
 docker run -p 5000:5000 hangman_flask
 
 The app should now be running on localhost:5000.
-Usage
+
+###### Usage
 
 Here you can include a fun example of how to play the game or how to interact with the app.
-Deployment
+
+###### Deployment
 
 Additional notes about how to deploy this on a live system.
 Docker
+
+Run the container in detached mode with the following command:
 
 bash
 
@@ -105,3 +114,7 @@ Acknowledgments
     Hat tip to anyone whose code was used
     Inspiration
     etc
+
+```bash
+docker
+docker-compose
