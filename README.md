@@ -6,6 +6,7 @@ The Hangman Flask App is a fun, interactive web-based game where players guess a
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
+  - [Tutorials](#tutorials)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
