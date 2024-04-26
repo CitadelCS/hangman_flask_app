@@ -39,7 +39,7 @@ For more information on using Docker and deploying applications, consider the fo
 - [DevSecOps Tutorial for Beginners | CI Pipeline with GitHub Actions and Docker Scout](https://www.youtube.com/watch?v=gLJdrXPn0ns)
 
 
-##### Installation
+### Installation
 
 A step by step series of examples that tell you how to get a development env running.
 
@@ -77,7 +77,7 @@ This is a web app that will launch a hangman app, and you will be able to play a
 
 Read through the tutorials, and you will be able to deply the app. Test it on your local machine first. 
 
-### Docker
+## Docker
 
 Run the container in detached mode with the following command:
 
@@ -85,7 +85,7 @@ bash
 
 docker run -d -p 5000:5000 hangman_flask
 
-### Docker Swarm
+## Docker Swarm
 
 Initialize Docker Swarm:
 
