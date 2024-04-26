@@ -43,7 +43,7 @@ Clone the repo:
 
 bash
 
-git clone https://github.com/rowingsjr/hangman_flask.git
+git clone https://github.com/rowingsjr/hangman_flask_app.git
 
 Navigate to the cloned directory:
 
