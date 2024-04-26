@@ -14,7 +14,6 @@ The Hangman Flask App is a fun, interactive web-based game where players guess a
   - [Docker Swarm](#docker-swarm)
 - [Development](#development)
 - [Authors](#authors)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ## Getting Started
@@ -23,7 +22,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
+What things you need to install the software and how to install them: 
+1. Download Docker desktop
+2. Find your IDE, I used IntelliJ
+3. Setup your python environment and edit your run configuration
+4. Make sure you install your requirements.txt
+
 
 ### Tutorials
 
@@ -67,11 +71,11 @@ The app should now be running on localhost:5000.
 
 ## Usage
 
-Here you can include a fun example of how to play the game or how to interact with the app.
+This is a web app that will launch a hangman app, and you will be able to play a simple hangman game. Enjoy!
 
 ## Deployment
 
-Additional notes about how to deploy this on a live system.
+Read through the tutorials, and you will be able to deply the app. Test it on your local machine first. 
 
 ### Docker
 
@@ -105,15 +109,9 @@ If you wish to develop the app, you can mount a volume to the Docker container t
 
     Richard Owings Jr - Graduate Student MS Computer Science - Initial work and development of project - rowingsjr
 
-See also the list of contributors who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
 ## Acknowledgments
 
-    Special Ackonwledgment to Dr. Verdicchio for allowing this to be a success. 
+    Special Ackonwledgments to Dr. Verdicchio for allowing this to be a success. 
 
 ```bash
 docker
